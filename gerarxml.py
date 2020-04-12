@@ -1,6 +1,6 @@
 import xmltodict
 import json, requests
-import datetime
+import datetime ,os
 now = datetime.datetime.now()
 
 openx = open("boinaxml.json", "w", encoding="utf8")
@@ -60,7 +60,7 @@ for h in pegartempo:
    v+=1
 with open('xmltv.json', 'w', encoding='utf-8') as f:
     json.dump(tudo, f, ensure_ascii=False, indent=4)
-
+os.system("mv xmltv.json /var/www/html/.")
 
 print(hora, minuto)
 '''with open('boinaxml.json', encoding="utf8") as f:
